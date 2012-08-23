@@ -1,7 +1,13 @@
 doctype html
 html
   head
-    title My Title
+    link href='/lib/bootstrap/css/bootstrap.css' media='all' rel='stylesheet' type='text/css'
+    script src='/lib/bootstrap/js/bootstrap.js'
+    script src='/lib/jQuery.js'
+    title Burrito Decider
 
-  body
-    == yield
+  body style='padding-top:50px'
+
+    div.container
+      div.hero-unit
+        == yield
