@@ -8,6 +8,6 @@ end
 get '/' do
   @places = ["Baja Fresh Mexican Grill", "Qdoba Mexican Grill", "El Limon", 
           "Chipotle Mexican Grill", "Machismo Burrito Bar"]
-  @place = @places[rand(@places.length)]
+  @place = @places.sample
   slim :hello
 end
