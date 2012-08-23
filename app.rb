@@ -1,8 +1,8 @@
 require 'sinatra'
-
-places = ["Baja Fresh Mexican Grill", "Qdoba Mexican Grill", "El Limon", 
-          "Chipotle Mexican Grill", "Machismo Burrito Bar"]
+require 'slim'
 
 get '/' do
-  places[rand(places.length)]
+  @places = ["Baja Fresh Mexican Grill", "Qdoba Mexican Grill", "El Limon", 
+          "Chipotle Mexican Grill", "Machismo Burrito Bar"]
+  slim :hello
 end
