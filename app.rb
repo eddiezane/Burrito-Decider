@@ -13,6 +13,11 @@ class BurritoFinder
   end
 end
 
+#Capitalize first letter of each word
+def titleize(text)
+  text.split.each{|i| i.capitalize!}.join(' ')
+end
+
 configure do
   set :public_folder, Proc.new { File.join(root, "static") }
 end
