@@ -1,6 +1,16 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    faraday (0.8.4)
+      multipart-post (~> 1.1)
+    faraday_middleware (0.8.8)
+      faraday (>= 0.7.4, < 0.9)
+    foursquare2 (1.8.1)
+      faraday (~> 0.8)
+      faraday_middleware (>= 0.8)
+      hashie (~> 1.0)
+    hashie (1.2.0)
+    multipart-post (1.1.5)
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
@@ -18,5 +28,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  foursquare2
   sinatra
   slim
