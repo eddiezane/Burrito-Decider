@@ -25,3 +25,12 @@ end
 get '/' do
   slim :hello
 end
+
+get '/zip' do
+  place = BurritoFinder.find_burrito params[:zip]
+  @name = titleize place.name
+  @address = titleize place.location.address unless place.location.address.nil?
+  @city = titleize place.location.city unless place.location.city.nil?
+  @phone = place.contact.phone unless place.contact.phone.nil?
+  slim :zip
+end

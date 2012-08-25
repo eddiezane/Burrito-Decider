@@ -1,2 +1,8 @@
-h2 style='text-align:center' Where Should I Get My Burrito?
-h3 style='text-align:center' = @place
+h1 style="text-align:center" Enter Your Zip Code!
+br
+table align="center"
+  tr
+    td
+      form action="/zip" method="get"
+        input type="text" name="zip" class="text"
+        input type="submit" value="Find" class="btn"
